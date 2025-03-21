@@ -23,7 +23,6 @@ class Product:
         if self.quantity == 0:
             self.active = False
 
-
     def is_active(self) -> bool:
         return self.active
 
@@ -48,18 +47,3 @@ class Product:
             self.active = False
 
         return quantity * self.price
-
-
-
-# bose = Product("Bose QuietComfort Earbuds", price=249.99, quantity=500)
-# mac = Product("MacBook Air M2", price=1449.99, quantity=100)
-#
-# print(bose.buy(50))
-# print(mac.buy(101))
-# print(mac.is_active())
-#
-# print(bose.show())
-# print(mac.show())
-#
-# bose.set_quantity(1000)
-# print(bose.show())
