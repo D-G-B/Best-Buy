@@ -51,15 +51,15 @@ class Product:
 
 
 
-bose = Product("Bose QuietComfort Earbuds", price=249.99, quantity=500)
-mac = Product("MacBook Air M2", price=1449.99, quantity=100)
-
-print(bose.buy(50))
-print(mac.buy(101))
-print(mac.is_active())
-
-print(bose.show())
-print(mac.show())
-
-bose.set_quantity(1000)
-print(bose.show())
+# bose = Product("Bose QuietComfort Earbuds", price=249.99, quantity=500)
+# mac = Product("MacBook Air M2", price=1449.99, quantity=100)
+#
+# print(bose.buy(50))
+# print(mac.buy(101))
+# print(mac.is_active())
+#
+# print(bose.show())
+# print(mac.show())
+#
+# bose.set_quantity(1000)
+# print(bose.show())
