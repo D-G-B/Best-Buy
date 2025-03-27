@@ -47,7 +47,8 @@ class Store:
         """
         return [p for p in self.products if p.is_active()]
 
-    def order(self, shopping_list: list[tuple[Product, int]]) -> float:
+    @staticmethod
+    def order(shopping_list: list[tuple[Product, int]]) -> float:
         """
         Processes an order by purchasing specified quantities of products.
 
