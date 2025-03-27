@@ -128,19 +128,24 @@ def start(store):
     """Main function to start the user interface"""
     while True:
         display_menu()
-        choice = input(f"{YELLOW}Enter your choice (1-4): {RESET}")
+        try:
+            choice = input(f"{YELLOW}Enter your choice (1-4): {RESET}").strip()
+            if choice not in ("1", "2", "3", "4"):
+                raise ValueError
 
-        if choice == '1':
-            list_products(store)
-        elif choice == '2':
-            show_total_quantity(store)
-        elif choice == '3':
-            make_order(store)
-        elif choice == '4':
-            print_header("THANK YOU FOR SHOPPING WITH US")
-            print(f"{YELLOW}Goodbye!{RESET}")
-            sys.exit(0)
-        else:
+            if choice == '1':
+                list_products(store)
+            elif choice == '2':
+                show_total_quantity(store)
+            elif choice == '3':
+                make_order(store)
+            elif choice == '4':
+                print_header("THANK YOU FOR SHOPPING WITH US")
+                print(f"{YELLOW}Goodbye!{RESET}")
+                sys.exit(0)
+            else:
+                print(f"{YELLOW}Invalid choice. Please enter a number between 1 and 4.{RESET}")
+        except ValueError:
             print(f"{YELLOW}Invalid choice. Please enter a number between 1 and 4.{RESET}")
 
         input(f"\n{BLUE}Press Enter to continue...{RESET}")
