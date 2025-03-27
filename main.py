@@ -1,6 +1,7 @@
+import sys
 from products import Product
 from store import Store
-import sys
+
 
 # ANSI color codes
 BLUE = "\033[38;5;39m"  # Lighter blue
@@ -152,6 +153,7 @@ def start(store):
 
 
 def main():
+    """ Initialises store and starts user interface """
     start(best_buy)
 
 
