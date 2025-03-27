@@ -52,7 +52,8 @@ class Store:
         """
         Processes an order by purchasing specified quantities of products.
 
-        :param shopping_list: A list of tuples, where each tuple contains a Product object and the quantity to buy.
+        :param shopping_list: A list of tuples, where each tuple contains a
+                                Product object and the quantity to buy.
         :return: The total cost of the order.
         """
         total_price = 0
